@@ -1,0 +1,111 @@
+@import "/src/styles.scss";
+//                    <img src="/assets/img/react.png" alt="">
+.container{
+  width: 100%;
+  height: 100%;
+  @include flexCent();
+  padding-top: 5%;
+  .body{
+    background-color: $colo3;
+  width: 90%;
+  height: 100%;
+  overflow: auto;
+  border-radius: 5vh;
+  padding: 0%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  .card{
+    @include tablet{
+      width: 45%;
+      margin-top: 10%;
+    }
+    @include phone{
+      width: 90%;
+      margin-top: 10%;
+    }
+    overflow: hidden;
+    margin-right: 10px;
+    height: 45%;
+    width: 35%;
+    background-color: rgb(75, 75, 75);
+    position: relative;
+    border-radius: 5vh;
+    .desc{
+      position: absolute;
+      width: 80%;
+      height: 100%;
+      background-color: $bot2;
+      padding: 10%;
+      transform: translateX(-92%);
+      transition: all 2s;
+      &:hover{
+        transform: translateX(0%);
+      }
+    }
+    display: flex;
+    grid-template-columns: repeat(1,2fr 1.5fr);
+    grid-template-rows: repeat(1,1fr);
+    .img{
+      @include compu{
+        padding-left: 50px;
+      }
+      @include tablet{
+        padding-left: 00px;
+      }
+      flex: 1;
+      height: 100%;
+      width: 100%;
+      background-color: $fondo2;
+      img{
+        @include phone{
+          height: 80%;
+        }
+        height: 90%;
+      object-fit: cover;
+      object-position: center center;
+      }
+    }
+    .datos{
+      @include compu{
+        width: 30%;
+      }
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      span{
+        @include flexCent();
+        width: 70%;
+        padding-right: 15px;
+        height: 23%;
+        img{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+        }
+        p{
+          font-weight: bold;
+          opacity: 0;
+          transform: translateX(-100%);
+          position: absolute;
+          transition: all 1s;
+          color: $text4;
+        }
+        i{
+          color: black;
+          font-size: 5vmin;
+        }
+        &:hover{
+          p{
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  }
+}

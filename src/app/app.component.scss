@@ -1,0 +1,78 @@
+@import "/src//styles.scss";
+
+.container{
+    height: 100vh;
+    width: 100vw;
+
+    .detalles{
+        padding: 0;
+        margin: 0;
+        height: 40vh;
+        width: 100vw;
+        display: flex;
+
+        justify-content: end;
+       
+        .colin{
+            
+            padding: 0;
+            margin: 0;
+            
+            .box{
+
+                height: 30%;
+                width: 30px;
+            }
+            .luna{
+                box-shadow: 10px 5px 5px $colo3;
+                height: 20vh;
+                width: 20vh;
+                border-radius: 15vh;
+                position: absolute;
+                left: 45vw;
+                bottom: 20vh;
+                z-index: 10;
+            }
+            .sombra{
+                width: 5vh;
+                height: .5%;
+                box-shadow: 10px 5px 5px aqua;
+
+                position: absolute;
+            }
+            .img{
+                margin-top: 13vh;
+                background-image: url("../assets/img/wave.png");
+                width: 100vw;
+                height: 100px;
+                @include phone{
+                    opacity: 0;
+                }
+                filter: drop-shadow(0 0 110px #fff);
+                filter: contrast(.02%);
+                filter: brightness(0.2);
+                background-size: 100vw 100px;
+            }
+        }
+    }
+    .body{
+        width: 100vw;
+        height: 58vh;
+        position: relative;
+        .nav{
+            left: 20vw;
+            top: 85vh;
+            position: absolute;
+            @include phone{
+                top: 85vh;
+                left: 25px;
+            }
+        }
+        .contenido{
+            width: 100vw;
+            height: 90vh;
+           
+        }
+        
+    }
+}

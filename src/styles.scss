@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+
+$fondo:#ff410d;
+$fondo2:#1e151a;
+$colo2:rgb(29, 29, 32);
+$colo3:rgb(54, 54, 54);
+$bot:#a65102;
+$bot2:#ff410d;
+$text1:#f69d3c;
+$text2:rgb(194, 194, 197);
+$text3:rgb(255, 255, 255);
+$text4:#ff410d;
+@mixin phone {
+    @media screen  and (max-width: 600px) {
+        @content;
+    }
+}
+body{
+    background: linear-gradient(to left , $fondo2 50%, $fondo2 50%);
+    padding: 0;
+    margin: 0;
+    @include phone{
+        background: linear-gradient( to top,  $fondo2 50%,  $fondo2 50%);
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+@mixin compu {
+    @media screen  and (max-width: 2000px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media screen  and (max-width: 800px) {
+        @content;
+    }
+}
+@mixin flexCent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin titulo {
+        font-size: 5vmin;
+        color: $text1;
+        font-weight: bold;
+        margin: 0;
+        &:hover{
+            span{
+                color: $text4;
+            }
+        }
+        span{
+            font-size: 8vmin;
+            color: $text1;
+            transition: all 1s;
+            bottom: 40px;
+            @include phone{
+                font-size: 10vmin;
+            }
+
+        }
+        @include phone{
+            font-size: 9vmin;
+        }
+    
+}
+@mixin parrafo {
+        font-size: 3vmin;
+        color: $text3;
+        @include phone{
+            font-size: 5vmin;
+        }
+    
+}

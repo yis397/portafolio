@@ -1,0 +1,92 @@
+@import "/src/styles.scss";
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,3fr 2fr);
+    grid-template-rows: repeat(1,1fr);
+    @include phone{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(1,2fr 2fr);
+    }
+
+    .datos{
+        @include phone{
+            padding-left:10% ;
+        }
+        padding: 3%;
+        &:hover{
+            .mio{
+                h1{
+                    
+                    opacity: 1;
+                }
+                h2{
+                    span{
+                        color:$text4 ;
+                    
+                    }
+                }
+            }
+        }
+        .mio{
+            animation:bounce; 
+            animation-duration: 2s;
+            h1{
+                color: $text4;
+                opacity: 0;
+                transition: all .9s;
+            }
+            height: 100%;
+            width: 100%;
+            @include flexCent();
+            flex-direction: column;
+            h2{
+                @include titulo();
+
+            }
+            h3{
+                color: $text2;
+                font-weight: bold;
+            }
+            p{
+               
+        
+                @include parrafo();
+                margin-bottom: 10vh;
+
+            }
+        }
+    }
+    .cont{
+      height: 100%;
+      width: 100%;
+      @include phone{
+        padding-bottom: 50px
+      }
+     @include flexCent();
+        img{
+        @include phone{
+            height: 30vh;
+            width: 30vh; 
+            box-shadow: 0 0 15px 10px $colo3;
+        }
+        height: 50vh;
+        width: 50vh;
+        border-radius: 30vh;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        object-position: center center;
+        box-shadow: 0 0 55px 20px $colo3;
+        transition: all 3s;
+        }
+        &:hover{
+            img{
+
+                box-shadow: 0 0 75px 20px $text1; 
+            }
+        }
+      
+    }
+}

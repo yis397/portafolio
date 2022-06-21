@@ -1,0 +1,58 @@
+@import "/src/styles.scss";
+.container{
+    @include phone{
+        width: 90vw;
+    }
+    height: 10vh;
+    width: 50vw;
+    border-radius: 20vh;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 15px 3px $colo3;
+    @include flexCent();
+    padding-left: 9%;
+    padding-right: 9%;
+    justify-content: space-between;
+    a{
+
+        position: relative;
+        &:hover{
+            i{
+                font-size: 6vmin;
+                color: $bot2;
+            }
+            span{
+                opacity: 1;
+            }
+        }
+        i{
+            color: $bot;
+            font-size: 5vmin;
+            @include phone{
+            font-size: 10vmin;
+                
+            }
+        }
+        span{
+            width: 110%;
+            @include flexCent();
+            border-radius: 5px;
+            background: $colo3;
+            @include phone{
+                background-color: $colo2;
+            }
+            opacity: 0;
+            right: 1%;
+            top: 150%;
+            position: absolute;
+            translate: all 2s;
+            color: $text1;
+            font-size: 3vmin;
+            @include phone{
+                opacity: 1;
+                top:90%;
+                font-size: 4vmin;
+                height: 40px;
+            }
+        }
+    }
+}   
