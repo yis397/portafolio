@@ -37,7 +37,7 @@
       width: 80%;
       height: 100%;
       background-color: $bot2;
-      padding: 10%;
+      padding: 5%;
       transform: translateX(-92%);
       transition: all 2s;
       &:hover{
@@ -58,6 +58,15 @@
       height: 100%;
       width: 100%;
       background-color: $fondo2;
+      @include flexCent();
+      .img2{
+        @include phone{
+          height: 45%;
+        }
+        height: 50%;
+      object-fit: cover;
+      object-position: center center;
+      }
       img{
         @include phone{
           height: 80%;
@@ -83,7 +92,7 @@
         padding-right: 15px;
         height: 23%;
         img{
-          height: 100%;
+          height: 80%;
           object-fit: cover;
           object-position: center center;
         }
@@ -98,6 +107,9 @@
         i{
           color: black;
           font-size: 5vmin;
+          @include phone{
+            font-size: 10vmin;
+          }
         }
         &:hover{
           p{
